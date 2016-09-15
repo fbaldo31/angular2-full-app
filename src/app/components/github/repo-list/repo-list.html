@@ -1,0 +1,11 @@
+<h3>Repo list</h3>
+
+<ul class="card-inverse group-list">
+	<li *ngFor="let repo of repos | async" class="list-group-item-success">
+    <a [routerLink]="['/dashboard/github', repo.owner.login, repo.name]">
+      {{ repo.name }}
+    </a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

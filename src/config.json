@@ -1,0 +1,8 @@
+{
+  "debugLevelPath": "[0-9]+",
+  "infoLevelPath": ".",
+  "logLevelPath": ".",
+  "warnLevelPath": ".",
+  "errorLevelPath": "[^LoggedFirstClass]",
+  "logLevel": 3
+}

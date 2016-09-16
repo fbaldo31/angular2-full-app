@@ -1,12 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
-// import { FormBuilder } from '@angular/forms'; /* FormGroup, Validators*/
 import { Router } from '@angular/router';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
-// import { AuthService } from '../../services/auth.service';
-// import { FormStateModel } from '../../models/form/form-state.model';
-// import { LoginRequestModel } from '../../models/auth/login-request.model';
-// import * as moment from 'moment';
 
 @Component({
     selector: 'login',
@@ -18,8 +13,6 @@ export class Login implements AfterViewInit {
     mode = 'Promise';
     secret = '4ok2x70rlfokc8g0wws8c8kwcokw80k44sg48goc0ok4w0so0k';
     client_id = '1_3bcbxd9e24g0gk4swg0kwgcwg4o8k8g4g888kwc44gcc0gwwk4';
-    token_type: string;
-    access_token: string;
     // Dropdown:
     public disabled:boolean = false;
     public status:{isopen:boolean} = {isopen: false};
@@ -48,13 +41,6 @@ export class Login implements AfterViewInit {
     }
     login (username: string, password: string) {
         if (!username || !password ) { return; }
-        /* this._authService.setTokenParams(this.client_id, this.secret, username, password)
-            .then(
-                token => {
-                    this.saveToken(token.token_type, token.access_token);
-                    this._router.navigate(['/dashboard']);	},
-                error =>  { this.errorMsg = <any>error; this.displayError(<any>error); }
-            );*/
         this._router.navigate(['dashboard']);
         this._toastr.warning('Welcome', this.successMsg = 'You are logged in');
     }

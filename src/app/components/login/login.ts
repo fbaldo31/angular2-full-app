@@ -13,11 +13,6 @@ export class Login implements AfterViewInit {
     mode = 'Promise';
     secret = '4ok2x70rlfokc8g0wws8c8kwcokw80k44sg48goc0ok4w0so0k';
     client_id = '1_3bcbxd9e24g0gk4swg0kwgcwg4o8k8g4g888kwc44gcc0gwwk4';
-    // Dropdown:
-    public disabled:boolean = false;
-    public status:{isopen:boolean} = {isopen: false};
-    public items:Array<string> = ['The first choice!',
-        'And another choice for you.', 'but wait! A third!'];
     constructor (private _router: Router, public _toastr: ToastsManager) {}
 
     ngAfterViewInit() {
@@ -27,17 +22,6 @@ export class Login implements AfterViewInit {
         } else if (this.successMsg) {
             this._toastr.success('Welcome', this.successMsg);
         }
-    }
-    /**
-     * Dropdown part
-     */
-    public toggled(open:boolean):void {
-        console.log('Dropdown is now: ', open);
-    }
-    public toggleDropdown($event:MouseEvent):void {
-        $event.preventDefault();
-        $event.stopPropagation();
-        this.status.isopen = !this.status.isopen;
     }
     login (username: string, password: string) {
         if (!username || !password ) { return; }

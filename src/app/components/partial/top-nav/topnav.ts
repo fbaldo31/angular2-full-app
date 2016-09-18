@@ -9,8 +9,6 @@ export class TopNav {
     // Dropdown:
     public disabled:boolean = false;
     public status:{isopen:boolean} = {isopen: false};
-    public items:Array<string> = ['The first choice!',
-        'And another choice for you.', 'but wait! A third!'];
     /**
      * Dropdown part
      */

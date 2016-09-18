@@ -1,7 +1,7 @@
 Angular2 Full App
 =================================
 
-Angular 2 rc.6 with Bootstrap 4 TypeScriptn Systemjs and Gulp. A couple of must-have components have
+Angular 2 rc.6 with Bootstrap 4 TypeScript Systemjs and Gulp. A couple of must-have components have
 been already integrated and others will come soon.
 
 Prerequisites

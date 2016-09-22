@@ -24,8 +24,7 @@
             'ng2-bootstrap/components': 'npm:ng2-bootstrap/components',
             'ng2-toastr': 'npm:ng2-toastr',
             // 'ng2-translate': 'npm:ng2-translate',
-            'chartjs': 'npm:ng2-charts/components/chart.js',
-            'ng2-charts': 'npm:ng2-charts/bundles/ng2-chart.js',
+            'ng2-charts': 'npm:ng2-charts',
             // 'angular2-smart-logger': 'npm:angular2-smart-logger',
             // 'angular2-cache': 'npm:angular2-cache'
         },
@@ -46,10 +45,6 @@
             },
             'ng2-toastr': {
                 main: 'ng2-toastr',
-                defaultExtension: 'js'
-            },
-            'chartsjs': {
-                main: 'charts',
                 defaultExtension: 'js'
             },
             'ng2-charts': {

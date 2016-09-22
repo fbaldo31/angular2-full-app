@@ -1,11 +1,14 @@
 <h3>Welcome</h3>
 
 <section id="dash-home">
-    <base-chart
-            class="chart"
-            [datasets]="datasets"
-            [labels]="labels"
-            [options]="options"
-            [chartType]="'line'">
+    <base-chart class="chart"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
     </base-chart>
 </section>

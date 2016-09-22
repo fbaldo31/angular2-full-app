@@ -1,6 +1,6 @@
 {
   "name": "angular2-full-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular2 starter based on Angular2 with TypeScript and Gulp QuickStart",
   "scripts": {
     "clean": "gulp clean",

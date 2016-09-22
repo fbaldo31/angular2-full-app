@@ -1,7 +1,7 @@
 Angular2 Full App
 =================================
 
-Angular 2 rc.6 with Bootstrap 4 TypeScript Systemjs and Gulp. A couple of must-have components have
+Angular 2.0.0 with Bootstrap 4 TypeScript Systemjs and Gulp. A couple of must-have components have
 been already integrated and others will come soon.
 
 Prerequisites
@@ -49,17 +49,17 @@ Resources
 Ready to use:
 - ng2-bootstrap - http://valor-software.com/ng2-bootstrap
 - ng2-toastr - https://github.com/PointInside/ng2-toastr
+- ng2-charts - https://github.com/valor-software/ng2-charts
 
 Will be integrated asap:
 - ng2-translate - https://github.com/ocombe/ng2-translate
-- ng2-charts - https://github.com/valor-software/ng2-charts
 
 To do:
 - rename lib to vendor
 - implement a cache system
 - tests
-- ugrade to rc.7
 - provide examples of directive, pipe...
+
 What else ?
 ----------
 Feel free to contribute or suggest improvement f.baldo31@gmail.com

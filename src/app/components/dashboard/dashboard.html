@@ -1,16 +1,6 @@
-<topnav></topnav>
+
 <sidebar></sidebar>
-
-<section class="main-container" [ngClass]="{sidebarPushRight: isActive}">	
-	<router-outlet></router-outlet>
-</section>
-
-<section id="dash-home">
-	<base-chart
-			class="chart"
-			[datasets]="datasets"
-			[labels]="labels"
-			[options]="options"
-			[chartType]="'line'">
-	</base-chart>
+<section class="main-container" [ngClass]="{sidebarPushRight: isActive}">
+    <router-outlet></router-outlet>
+    <dash-home></dash-home>
 </section>

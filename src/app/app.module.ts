@@ -7,8 +7,7 @@ import { HttpModule }                       from "@angular/http";
 // Dependencies
 import {Ng2BootstrapModule}                       from "ng2-bootstrap";
 import {ToastModule}                              from 'ng2-toastr/ng2-toastr';
-// import * as Chartjs                               from '../lib/chart.js/dist/Chart.js';
-import { ChartsModule }                           from 'ng2-charts/ng2-charts';
+import { ChartsModule }                           from 'ng2-charts';
 // App Components
 import { rootRouterConfig }                       from "./app.routes";
 import { AppComponent }                           from "./app.component";
@@ -22,15 +21,15 @@ import { Github }                                 from './services/github';
 import { Sidebar }                                from "./components/partial/sidebar/sidebar";
 import { Login }                                  from "./components/login/login";
 import { Dashboard }                              from "./components/dashboard/dashboard";
+import {DashHome}                                 from "./components/dash-home/dash-home";
 
 @NgModule({
   declarations: [AppComponent, FrontHead, FrontNav, TopNav, About, RepoBrowser, RepoList, RepoDetail, Home, Login, Sidebar,
-    Dashboard],
+    Dashboard, DashHome],
   imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), Ng2BootstrapModule,
     ToastModule, ChartsModule],
   providers   : [Github, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap   : [AppComponent]
 })
 export class AppModule {
-
 }

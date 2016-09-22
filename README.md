@@ -31,6 +31,10 @@ Install dependencies:
 
 `node_modules` and `typings` directories should be created during the install.
 
+Dependencies :
+
+> typings install chart.js
+
 Build the project:
 > npm run build
 

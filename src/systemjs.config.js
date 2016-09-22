@@ -24,7 +24,6 @@
             'ng2-bootstrap/components': 'npm:ng2-bootstrap/components',
             'ng2-toastr': 'npm:ng2-toastr',
             // 'ng2-translate': 'npm:ng2-translate',
-            'chartjs': 'npm:chart.js/dist/Chart.js',
             'ng2-charts': 'npm:ng2-charts',
             // 'angular2-smart-logger': 'npm:angular2-smart-logger',
             // 'angular2-cache': 'npm:angular2-cache'

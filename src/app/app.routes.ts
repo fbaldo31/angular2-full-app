@@ -8,6 +8,7 @@ import {TopNav}      from "./components/partial/top-nav/topnav";
 import {Sidebar}     from "./components/partial/sidebar/sidebar";
 import {Login}       from "./components/login/login";
 import {Dashboard}   from "./components/dashboard/dashboard";
+import {DashHome}    from "./components/dash-home/dash-home";
 
 export const rootRouterConfig: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,6 +18,7 @@ export const rootRouterConfig: Routes = [
     children: [
       {path: '', component: TopNav},
       {path: '', component: Sidebar},
+      {path: '', component: DashHome},
       {path: 'github', component: RepoBrowser,
         children: [
           {path: '', component: RepoList},

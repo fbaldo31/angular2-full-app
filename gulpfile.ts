@@ -63,6 +63,7 @@ gulp.task('sass', function() {
 gulp.task("assets", () => {
     return gulp.src([
         //'assets/styles/css/**',
+        'assets/i18n/**/*',
         'assets/img/**',
         'assets/fonts/**/*',
         ]).pipe(gulp.dest("build/assets"));
@@ -86,7 +87,7 @@ gulp.task("libs", () => {
             'bootstrap/node_modules/jquery/dist/jquery.js',
             'ng2-bootstrap/**',
             'ng2-toastr/**',
-            //'ng2-translate/**',
+            'ng2-translate/**',
             'chart.js/dist/Chart.js',
             'ng2-charts/**',
             //'angular2-smart-logger/**',

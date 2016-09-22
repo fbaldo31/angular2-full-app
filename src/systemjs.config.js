@@ -23,7 +23,7 @@
             'ng2-bootstrap': 'npm:ng2-bootstrap',
             'ng2-bootstrap/components': 'npm:ng2-bootstrap/components',
             'ng2-toastr': 'npm:ng2-toastr',
-            // 'ng2-translate': 'npm:ng2-translate',
+            'ng2-translate': 'npm:ng2-translate',
             'ng2-charts': 'npm:ng2-charts',
             // 'angular2-smart-logger': 'npm:angular2-smart-logger',
             // 'angular2-cache': 'npm:angular2-cache'
@@ -51,10 +51,10 @@
                 main: 'ng2-charts',
                 defaultExtension: 'js'
             },
-            // 'ng2-translate': {
-            //     main: 'ng2-translate',
-            //     defaultExtension: 'js'
-            // },
+            'ng2-translate': {
+                main: 'ng2-translate',
+                defaultExtension: 'js'
+            },
             // 'angular2-smart-logger': {
             //     main: 'Logger',
             //     defaultExtension: 'js'

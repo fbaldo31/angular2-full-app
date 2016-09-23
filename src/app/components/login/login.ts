@@ -25,8 +25,9 @@ export class Login implements AfterViewInit {
     }
     login (username: string, password: string) {
         if (!username || !password ) { return; }
+        this._toastr.info('Welcome', this.successMsg = 'You are logged in');
         this._router.navigate(['dashboard']);
-        this._toastr.warning('Welcome', this.successMsg = 'You are logged in');
+        console.log(this.successMsg);
     }
 
     saveToken(token_type:  string, access_token: string) {

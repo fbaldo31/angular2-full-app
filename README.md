@@ -50,12 +50,11 @@ Ready to use:
 - ng2-bootstrap - http://valor-software.com/ng2-bootstrap
 - ng2-toastr - https://github.com/PointInside/ng2-toastr
 - ng2-charts - https://github.com/valor-software/ng2-charts
-
-Will be integrated asap:
 - ng2-translate - https://github.com/ocombe/ng2-translate
 
 To do:
 - rename lib to vendor
+- add gulp prod task (minify)
 - implement a cache system
 - tests
 - provide examples of directive, pipe...

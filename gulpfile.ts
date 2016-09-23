@@ -69,31 +69,14 @@ gulp.task('css', function () {
         .pipe(concat('main.css'))
         .pipe(gulp.dest('src/assets/styles'));
 });
-/*
-gulp.task('sass', function() {
-    return gulp.src('src/assets/styles/main.scss',
-                    './node_modules/ng2-toastr/ng2-toastr.css')
-        .pipe(sass().on("error", sass.logError)
-        )
-        .pipe(gulp.dest('src/assets/styles'));
-});
 
-gulp.task('css', function() {
-    return gulp.src('./node_modules/ng2-toastr/ng2-toastr.css')
-        .pipe(gulp.dest('src/assets/styles'));
-});
-
-gulp.task('styles', function() {
-    return gulp.src('./src/assets/styles/*.css')
-        .pipe(concat('app.css'))
-        .pipe(gulp.dest('./src/assets/styles'));
-});*/
 
 /**
  * Copy all assets into build directory.
  */
 gulp.task("assets", () => {
     return gulp.src([
+        'assets/i18n/**/*',
         'assets/img/**',
         'assets/fonts/**/*',
         ]).pipe(gulp.dest("build/assets"));
@@ -117,7 +100,7 @@ gulp.task("libs", () => {
             'bootstrap/node_modules/jquery/dist/jquery.js',
             'ng2-bootstrap/**',
             'ng2-toastr/**',
-            //'ng2-translate/**',
+            'ng2-translate/**',
             'chart.js/dist/Chart.js',
             'ng2-charts/**',
             //'angular2-smart-logger/**',

@@ -6,6 +6,7 @@ const tsc = require("gulp-typescript");
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
+const merge = require('merge-stream');
 // const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const tsProject = tsc.createProject("tsconfig.json");
@@ -50,19 +51,31 @@ gulp.task("resources", () => {
 /**
  * Compile scss to css
  */
-gulp.task('sass', function() {
-    return gulp.src('src/assets/styles/main.scss')
-        .pipe(sass().on("error", sass.logError)
-        )
-        .pipe(gulp.dest('build/assets/styles'));
+gulp.task('css', function () {
+    var sassStream,
+        cssStream;
+
+    //compile sass
+    sassStream = gulp.src('src/assets/styles/main.scss')
+        .pipe(sass({
+            errLogToConsole: true
+        }));
+
+    //select additional css files
+    cssStream = gulp.src('./node_modules/ng2-toastr/ng2-toastr.css');
+
+    //merge the two streams and concatenate their contents into a single file
+    return merge(sassStream, cssStream)
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('src/assets/styles'));
 });
+
 
 /**
  * Copy all assets into build directory.
  */
 gulp.task("assets", () => {
     return gulp.src([
-        //'assets/styles/css/**',
         'assets/i18n/**/*',
         'assets/img/**',
         'assets/fonts/**/*',
@@ -114,6 +127,6 @@ gulp.task('watch', function () {
 /**
  * Build the project.
  */
-gulp.task("build", ['libs', 'sass', 'compile', 'assets', 'resources'], () => {
+gulp.task("build", [ 'css', 'libs', 'compile', 'assets', 'resources'], () => {
     console.log("Building the project ...");
 });

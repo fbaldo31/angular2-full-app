@@ -1,9 +1,16 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { ToastsManager }            from 'ng2-toastr/ng2-toastr';
+
 @Component({
   selector: 'dash-home',
   templateUrl: './app/components/dash-home/dash-home.html',
 })
-export class DashHome {
+export class DashHome implements OnInit {
+  constructor (public _toastr: ToastsManager) {}
+  ngOnInit() {
+    this._toastr.info('Welcome');
+    console.log('Welcome');
+  }
 // Chart
 // lineChart
   public lineChartData:Array<any> = [

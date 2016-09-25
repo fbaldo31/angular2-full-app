@@ -1,11 +1,17 @@
 <h3>Repo list</h3>
 
-<ul class="card-inverse group-list">
-	<li *ngFor="let repo of repos | async" class="list-group-item-success">
-    <a [routerLink]="['/dashboard/github', repo.owner.login, repo.name]">
-      {{ repo.name }}
-    </a>
-  </li>
+<ul class="card-inverse list-group">
+	<li *ngFor="let repo of repos; let i = index">
+        <div class="list-group-item" *ngIf="i">
+            <a [routerLink]="['/dashboard/github', repo.owner.login, repo.name]">
+                {{ repo.name }}
+            </a>
+        </div>
+   </li>
+
+    <!--<pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+    <pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm"
+                previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>-->
 </ul>
 
 <router-outlet></router-outlet>

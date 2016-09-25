@@ -1,6 +1,14 @@
-<h3>GitHub Browser</h3>
+<div class="jumbotron">
+    <h3>GitHub Browser</h3>
 
-<input type="text" #repoName placeholder="Search Github Orgs">
-<button (click)="searchForOrg(repoName.value)">Search Orgs</button>
+    <div class="col-lg-6">
+        <div class="input-group">
+            <input #repoName type="text" class="form-control" placeholder="Search Github Orgs">
+      <span class="input-group-btn">
+        <button (click)="searchForOrg(repoName.value)" class="btn btn-secondary" type="button">Search Orgs</button>
+      </span>
+        </div>
+    </div>
+</div>
 
 <router-outlet></router-outlet>

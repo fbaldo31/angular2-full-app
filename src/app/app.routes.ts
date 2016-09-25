@@ -18,7 +18,8 @@ export const rootRouterConfig: Routes = [
     children: [
       {path: '', component: TopNav},
       {path: '', component: Sidebar},
-      {path: '', component: DashHome},
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: 'home', component: DashHome},
       {path: 'github', component: RepoBrowser,
         children: [
           {path: '', component: RepoList},

@@ -47,6 +47,7 @@ The application should be displayed in the browser.
 Resources
 ---------
 Others libs integrated:
+- Angular 2 Material https://github.com/angular/material2
 - ng2-bootstrap - http://valor-software.com/ng2-bootstrap
 - ng2-toastr - https://github.com/PointInside/ng2-toastr
 - ng2-charts - https://github.com/valor-software/ng2-charts

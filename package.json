@@ -1,6 +1,6 @@
 {
   "name": "angular2-full-app",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Angular 2.0.0 with Bootstrap 4 TypeScript Systemjs and Gulp. A couple of must-have components have been already integrated",
   "scripts": {
     "clean": "gulp clean",

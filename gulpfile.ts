@@ -95,6 +95,7 @@ gulp.task("libs", () => {
             'rxjs/**',
             'zone.js/dist/**',
             '@angular/**',
+            '@angular2-material/**',
             'moment/min/moment-with-locales.min.js',
             'bootstrap/node_modules/tether/dist/js/tether.js',
             'bootstrap/node_modules/jquery/dist/jquery.js',

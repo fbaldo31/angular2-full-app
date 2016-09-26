@@ -1,15 +1,14 @@
-
-<div *ngIf="repoDetails.id" class="card-info-outline">
-    <div class="card-header">
-        <h2>{{ repoDetails.full_name }}</h2>
-    </div>
-    <div class="card-outline-primary">
+<md-card *ngIf="repoDetails.full_name">
+    <md-card-header *ngIf="repoDetails.organization">
+        <img md-card-avatar src="{{ repoDetails.organization.avatar_url }}">
+        <md-card-title>{{ repoDetails.full_name }}</md-card-title>
+        <md-card-subtitle>{{ repoDetails.organization.login }}</md-card-subtitle>
+    </md-card-header>
+    <img *ngIf="repoDetails.parent" class="pull-right" md-card-md-image src="{{ repoDetails.parent.owner.avatar_url }}">
+    <md-card-content>
         <p>{{ repoDetails.description }}</p>
-    </div>
-    <div class="card-footer">
-        Language: {{ repoDetails.language }}
-        <img  *ngIf="repoDetails.parent" class="card-img-bottom pull-right" src="{{ repoDetails.parent.owner.avatar_url }}">
-    </div>
-</div>
+        <p>Language: {{ repoDetails.language }}</p>
+    </md-card-content>
+</md-card>
 <hr>
 <pre>this.repoDetails = {{ repoDetails | json }}</pre>

@@ -1,10 +1,12 @@
-import { NgModule }                               from '@angular/core';
+import { NgModule }                                                       from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { RouterModule }                           from "@angular/router";
 import { FormsModule }                            from "@angular/forms";
 import { BrowserModule }                          from "@angular/platform-browser";
 import { HttpModule, Http }                       from "@angular/http";
 // Dependencies
+import { MdCoreModule }                           from '@angular2-material/core';
+import { MdCardModule }                           from '@angular2-material/card';
 import {Ng2BootstrapModule}                       from "ng2-bootstrap";
 import {ToastModule}                              from 'ng2-toastr/ng2-toastr';
 import {TranslateModule, TranslateStaticLoader, TranslateLoader} from 'ng2-translate/ng2-translate';
@@ -32,7 +34,7 @@ import {DashHome}                                 from "./components/dash-home/d
       provide: TranslateLoader,
       useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
       deps: [Http]
-    })],
+    }), MdCoreModule, MdCardModule.forRoot()],
   providers   : [Github, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   exports     : [TranslateModule],
   bootstrap   : [AppComponent]

@@ -1,12 +1,16 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewContainerRef} from '@angular/core';
 import { ToastsManager }            from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'dash-home',
-  templateUrl: './app/components/dash-home/dash-home.html',
+  templateUrl: './dash-home.html',
 })
 export class DashHome implements OnInit {
-  constructor (public _toastr: ToastsManager) {}
+  
+  constructor(private _toastr: ToastsManager, vRef: ViewContainerRef) {
+    this._toastr.setRootViewContainerRef(vRef);
+  }
+
   ngOnInit() {
     this._toastr.info('Welcome');
     console.log('Welcome');

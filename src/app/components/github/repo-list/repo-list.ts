@@ -1,16 +1,16 @@
 import {Component, OnInit}          from '@angular/core';
 import { Github }                   from '../../../services/github';
-import {Observable, Promise}        from 'rxjs';
+import {Observable}        from 'rxjs';
 import 'rxjs/add/operator/toPromise';
 import {ActivatedRoute}             from '@angular/router';
 @Component({
   selector: 'repo-list',
-  styleUrls: ['./app/components/github/repo-list/repo-list.css'],
-  templateUrl: './app/components/github/repo-list/repo-list.html',
+  styleUrls: ['./repo-list.css'],
+  templateUrl: './repo-list.html',
 })
 export class RepoList implements OnInit {
   org: string;
-  repos: Observable<Array>;
+  repos: Observable<Array<any>>;
   public totalItems:Array<any>;
   public currentPage:number = 1;
   public maxSize:number = 20;

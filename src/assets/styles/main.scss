@@ -7,5 +7,5 @@
 @import "variables";
 @import "mixins";
 // Fonts
-@include font-face(Roboto, 'Roboto/Roboto-Regular-webfont', 'eot svg ttf woff');
-@include font-face(font-awesome, 'Fontawesome-webfont', 'otf eot svg ttf woff woff2');
+@include font-face(Roboto, '../fonts/Roboto/Roboto-Regular-webfont');
+@include font-face(fontawesome, '../fonts/fontawesome-webfont');

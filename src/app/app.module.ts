@@ -1,19 +1,20 @@
-import { NgModule }                                                       from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { RouterModule }                           from "@angular/router";
 import { FormsModule }                            from "@angular/forms";
-import { BrowserModule }                          from "@angular/platform-browser";
 import { HttpModule, Http }                       from "@angular/http";
 // Dependencies
-import { MdCoreModule }                           from '@angular2-material/core';
-import { MdCardModule }                           from '@angular2-material/card';
-import {Ng2BootstrapModule}                       from "ng2-bootstrap";
-import {ToastModule}                              from 'ng2-toastr/ng2-toastr';
-import {TranslateModule, TranslateStaticLoader, TranslateLoader} from 'ng2-translate/ng2-translate';
+import { MatCardModule }                          from '@angular/material';
+import {BrowserAnimationsModule}                  from '@angular/platform-browser/animations';
+import {Ng2BootstrapModule, BsDropdownModule}     from "ngx-bootstrap";
+import {ToastModule, ToastsManager}               from 'ng2-toastr/ng2-toastr';
+import {TranslateModule, TranslateLoader}         from '@ngx-translate/core';
 import { ChartsModule }                           from 'ng2-charts';
 // App Components
 import { rootRouterConfig }                       from "./app.routes";
-import { AppComponent }                           from "./app.component";
 import { FrontHead }                              from './components/partial/front-head/front-head';
 import { FrontNav }                               from './components/partial/front-nav/front-nav';
 import { TopNav }                                 from './components/partial/top-nav/topnav';
@@ -29,15 +30,14 @@ import {DashHome}                                 from "./components/dash-home/d
 @NgModule({
   declarations: [AppComponent, FrontHead, FrontNav, TopNav, About, RepoBrowser, RepoList, RepoDetail, Home, Login, Sidebar,
     Dashboard, DashHome],
-  imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), Ng2BootstrapModule,
-    ToastModule, ChartsModule, TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
-      deps: [Http]
-    }), MdCoreModule, MdCardModule.forRoot()],
+  imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), Ng2BootstrapModule.forRoot(),
+    ToastModule.forRoot(), ChartsModule, TranslateModule.forRoot({
+      // provide: TranslateLoader,
+      //useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      //deps: [Http]
+    }), MatCardModule, BrowserAnimationsModule, BsDropdownModule.forRoot()],
   providers   : [Github, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   exports     : [TranslateModule],
   bootstrap   : [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

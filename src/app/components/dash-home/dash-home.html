@@ -2,7 +2,8 @@
 
 <section id="dash-home">
     <div class="card col-lg-6">
-        <base-chart class="chart card-img-top img-fluid"
+        
+        <canvas baseChart class="chart card-img-top img-fluid"
                     [datasets]="lineChartData"
                     [labels]="lineChartLabels"
                     [options]="lineChartOptions"
@@ -11,6 +12,7 @@
                     [chartType]="lineChartType"
                     (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)">
-        </base-chart>
+    </canvas>>
+    
     </div>
 </section>

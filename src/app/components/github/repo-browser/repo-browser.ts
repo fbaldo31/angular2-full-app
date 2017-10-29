@@ -4,8 +4,8 @@ import { Github }    from '../../../services/github';
 
 @Component({
   selector: 'repo-browser',
-  templateUrl: './app/components/github/repo-browser/repo-browser.html',
-  styleUrls: ['./app/components/github/repo-browser/repo-browser.css']
+  templateUrl: './repo-browser.html',
+  styleUrls: ['./repo-browser.css']
 })
 export class RepoBrowser {
 

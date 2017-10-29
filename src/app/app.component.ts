@@ -1,9 +1,10 @@
-import { Component }                  from '@angular/core';
-import {TranslateService}             from 'ng2-translate/ng2-translate';
+import { Component }        from '@angular/core';
+import {TranslateService}   from '@ngx-translate/core';
 
 @Component({
-  selector   : 'app',
-  templateUrl: './app/app.html',
+  selector: 'app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   public defaultLang: string;

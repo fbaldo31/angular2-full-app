@@ -5,8 +5,8 @@ import { Github }          from '../../../services/github';
 
 @Component({
   selector: 'repo-detail',
-  styleUrls: ['./app/components/github/repo-detail/repo-detail.css'],
-  templateUrl: './app/components/github/repo-detail/repo-detail.html',
+  styleUrls: ['./repo-detail.css'],
+  templateUrl: './repo-detail.html',
 //  providers: [CacheService]
 })
 export class RepoDetail implements OnInit {

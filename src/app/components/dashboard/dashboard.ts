@@ -2,7 +2,7 @@ import {Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'dashboard',
-  templateUrl: './app/components/dashboard/dashboard.html'
+  templateUrl: './dashboard.html'
 })
 export class Dashboard implements OnInit {
     public user: {};

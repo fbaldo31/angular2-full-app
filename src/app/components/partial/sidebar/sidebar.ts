@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'sidebar',
-    templateUrl: './app/components//partial/sidebar/sidebar.html',
+    templateUrl: './sidebar.html',
     // directives: [ROUTER_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 

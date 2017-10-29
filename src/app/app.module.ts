@@ -13,6 +13,7 @@ import {Ng2BootstrapModule, BsDropdownModule}     from "ngx-bootstrap";
 import {ToastModule, ToastsManager}               from 'ng2-toastr/ng2-toastr';
 import {TranslateModule, TranslateLoader}         from '@ngx-translate/core';
 import { ChartsModule }                           from 'ng2-charts';
+import { NgxDatatableModule }                     from '@swimlane/ngx-datatable';
 // App Components
 import { rootRouterConfig }                       from "./app.routes";
 import { FrontHead }                              from './components/partial/front-head/front-head';
@@ -26,16 +27,16 @@ import { Sidebar }                                from "./components/partial/sid
 import { Login }                                  from "./components/login/login";
 import { Dashboard }                              from "./components/dashboard/dashboard";
 import {DashHome}                                 from "./components/dash-home/dash-home";
-
+import {Table}                                 from "./components/table/table";
 @NgModule({
   declarations: [AppComponent, FrontHead, FrontNav, TopNav, About, RepoBrowser, RepoList, RepoDetail, Home, Login, Sidebar,
-    Dashboard, DashHome],
+    Dashboard, DashHome, Table],
   imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), Ng2BootstrapModule.forRoot(),
     ToastModule.forRoot(), ChartsModule, TranslateModule.forRoot({
       // provide: TranslateLoader,
       //useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
       //deps: [Http]
-    }), MatCardModule, BrowserAnimationsModule, BsDropdownModule.forRoot()],
+    }), MatCardModule, BrowserAnimationsModule, BsDropdownModule.forRoot(), NgxDatatableModule],
   providers   : [Github, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   exports     : [TranslateModule],
   bootstrap   : [AppComponent]

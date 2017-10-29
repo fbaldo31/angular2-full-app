@@ -9,6 +9,7 @@ import {Sidebar}     from "./components/partial/sidebar/sidebar";
 import {Login}       from "./components/login/login";
 import {Dashboard}   from "./components/dashboard/dashboard";
 import {DashHome}    from "./components/dash-home/dash-home";
+import {Table} from './components/table/table';
 
 export const rootRouterConfig: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -29,7 +30,8 @@ export const rootRouterConfig: Routes = [
               {path: ':repo', component: RepoDetail}
             ]
           }]
-      }
+      },
+      {path: 'table', component: Table},
         ]
   },
   {path: 'home', component: Home},

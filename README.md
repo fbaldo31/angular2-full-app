@@ -25,11 +25,12 @@ Install dependencies:
 ## Resources
 ---------
 Others libs integrated:
-- Angular Material https://material.angular.io
-- ngx-bootstrap - https://valor-software.com/ngx-bootstrap
-- ng2-toastr - https://github.com/PointInside/ng2-toastr
-- ng2-charts - https://github.com/valor-software/ng2-charts
-- ngx-translate - https://github.com/ngx-translate/core
+- [Angular Material](https://material.angular.io)
+- [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
+- [ng2-toastr](https://github.com/PointInside/ng2-toastr)
+- [ng2-charts](https://github.com/valor-software/ng2-charts)
+- [ngx-translate](https://github.com/ngx-translate/core)
+- [ngx-datatable](https://swimlane.gitbooks.io/ngx-datatable)
 
 ## Development server
 

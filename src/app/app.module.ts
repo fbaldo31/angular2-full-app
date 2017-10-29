@@ -27,10 +27,12 @@ import { Sidebar }                                from "./components/partial/sid
 import { Login }                                  from "./components/login/login";
 import { Dashboard }                              from "./components/dashboard/dashboard";
 import {DashHome}                                 from "./components/dash-home/dash-home";
-import {Table}                                 from "./components/table/table";
+import {Table}                                    from "./components/table/table";
+import {Charts}                                   from "./components/charts/charts";
+
 @NgModule({
   declarations: [AppComponent, FrontHead, FrontNav, TopNav, About, RepoBrowser, RepoList, RepoDetail, Home, Login, Sidebar,
-    Dashboard, DashHome, Table],
+    Dashboard, DashHome, Table, Charts],
   imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), Ng2BootstrapModule.forRoot(),
     ToastModule.forRoot(), ChartsModule, TranslateModule.forRoot({
       // provide: TranslateLoader,

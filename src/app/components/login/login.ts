@@ -31,7 +31,7 @@ export class Login implements AfterViewInit {
         this._toastr.info('Welcome', this.successMsg = 'You are logged in');
         this.saveToken('token', this.client_id);
         console.log(this.successMsg);
-        this._router.navigate(['dashboard']);
+        this._router.navigate(['dashboard/home']);
     }
 
     saveToken(token_type:  string, access_token: string) {

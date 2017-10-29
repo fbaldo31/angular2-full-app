@@ -1,18 +1,54 @@
 <h3>Welcome</h3>
 
 <section id="dash-home">
-    <div class="card col-lg-6">
-        
-        <canvas baseChart class="chart card-img-top img-fluid"
-                    [datasets]="lineChartData"
-                    [labels]="lineChartLabels"
-                    [options]="lineChartOptions"
-                    [colors]="lineChartColors"
-                    [legend]="lineChartLegend"
-                    [chartType]="lineChartType"
-                    (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)">
-    </canvas>>
-    
+    <div class="card col-lg-12">     
+        <div class="panel col-lg-6">
+            <div class="row">
+                <div class="col-md-3 bg-info icon-col striped-bg">
+                    <i class="fa fa-eye fa-4x"></i>
+                </div>
+                <div class="col-md-9 text-col">
+                    <i class="fa fa-github fa-5x"></i>
+                    <h2>Github API</h2>
+                    <p>Api service example</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-lg-6">
+            <div class="row">
+                <div class="col-md-3 bg-info icon-col striped-bg">
+                    <i class="fa fa-eye fa-4x"></i>
+                </div>
+                <div class="col-md-9 text-col">
+                    <i class="fa fa-line-chart fa-5x"></i>
+                    <h2>Charts</h2>
+                    <p>Line chart example</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-lg-6">
+            <div class="row">
+                <div class="col-md-3 bg-info icon-col striped-bg">
+                    <i class="fa fa-eye fa-4x"></i>
+                </div>
+                <div class="col-md-9 text-col">
+                    <i class="fa fa-th fa-5x"></i>
+                    <h2>Bootstrap 4</h2>
+                    <p>Bootstrap components</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-lg-6">
+            <div class="row">
+                <div class="col-md-3 bg-info icon-col striped-bg">
+                    <i class="fa fa-eye fa-4x"></i>
+                </div>
+                <div class="col-md-9 text-col">
+                    <i class="fa fa-eye fa-5x"></i>
+                    <h2>71,842</h2>
+                    <p>Profile Views</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

@@ -1,20 +1,11 @@
-Angular2 Full App
-=================================
+# AngularFullApp
 
-Angular 2.0.0 with Bootstrap 4 TypeScript Systemjs and Gulp. A couple of must-have components have
-been already integrated and others will come soon.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
-Prerequisites
--------------
-Please install last stable version:
-- nodejs
-- gulp and gulp-cli
-- typings
-- typescript
-- ts-node
-> npm install -g gulp gulp-cli typings typescript ts-node
+Angular 4.2.4 with Bootstrap 4. A couple of must-have components have
+been already integrated.
 
-Running
+## Running
 -------
 
 Clone the repository:
@@ -31,35 +22,35 @@ Install dependencies:
 
 `node_modules` and `typings` directories should be created during the install.
 
-Dependencies :
-
-> typings install chart.js
-
-Build the project:
-> npm run build
-
-`build` directory should be created during the build
-
-> npm start
-
-The application should be displayed in the browser.
-
-Resources
+## Resources
 ---------
 Others libs integrated:
-- Angular 2 Material https://github.com/angular/material2
-- ng2-bootstrap - http://valor-software.com/ng2-bootstrap
+- Angular Material https://material.angular.io
+- ngx-bootstrap - https://valor-software.com/ngx-bootstrap
 - ng2-toastr - https://github.com/PointInside/ng2-toastr
 - ng2-charts - https://github.com/valor-software/ng2-charts
-- ng2-translate - https://github.com/ocombe/ng2-translate
+- ngx-translate - https://github.com/ngx-translate/core
 
-To do:
-- rename lib to vendor
-- add gulp prod task (minify)
-- implement a cache system
-- tests
-- provide examples of directive, pipe...
+## Development server
 
-What else ?
-----------
-Feel free to contribute or suggest improvement f.baldo31@gmail.com
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

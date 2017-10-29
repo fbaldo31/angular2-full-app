@@ -1,0 +1,15 @@
+<h3>Welcome</h3>
+<div id="charts">
+    <div class="card col-lg-6">        
+        <canvas baseChart class="chart card-img-top img-fluid"
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+        </canvas>    
+    </div>
+</div>

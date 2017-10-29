@@ -2,6 +2,8 @@
 @import "./theme/bootstrap";
 // Font Awesome
 @import "../../../node_modules/font-awesome/scss/font-awesome";
+// Angular material custom theme
+@import "./material-theme.scss";
 // Custom variables and styles
 @import "custom";
 @import "variables";
@@ -9,3 +11,8 @@
 // Fonts
 @include font-face(Roboto, '../fonts/Roboto/Roboto-Regular-webfont');
 @include font-face(fontawesome, '../fonts/fontawesome-webfont');
+// Components:
+// Datatable
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';

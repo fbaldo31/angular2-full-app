@@ -10,6 +10,7 @@ import {Login}       from "./components/login/login";
 import {Dashboard}   from "./components/dashboard/dashboard";
 import {DashHome}    from "./components/dash-home/dash-home";
 import {Table} from './components/table/table';
+import {Charts} from './components/charts/charts';
 
 export const rootRouterConfig: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -19,7 +20,7 @@ export const rootRouterConfig: Routes = [
     children: [
       {path: '', component: TopNav},
       {path: '', component: Sidebar},
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: '', redirectTo: 'dashboard/home', pathMatch: 'full'},
       {path: 'home', component: DashHome},
       {path: 'github', component: RepoBrowser,
         children: [
@@ -31,6 +32,7 @@ export const rootRouterConfig: Routes = [
             ]
           }]
       },
+      {path: 'charts', component: Charts},
       {path: 'table', component: Table},
         ]
   },

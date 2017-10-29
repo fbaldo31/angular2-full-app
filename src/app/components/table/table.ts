@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {DatatableComponent} from '@swimlane/ngx-datatable';
 
 @Component({
   selector: 'dash-table',
@@ -7,36 +8,47 @@ import {Component} from '@angular/core';
 })
 export class Table {
   rows = [];
-  loadingIndicator: boolean = true;
-  editing = {};
-
+  temp = [];
   columns = [
     { prop: 'name' },
-    { name: 'Gender' },
-    { name: 'Company' }
+    { name: 'Company' },
+    { name: 'Gender' }
   ];
-
-  constructor() {
-    this.fetch((data) => {
-      this.rows = data;
-      setTimeout(() => { this.loadingIndicator = false; }, 1500);
-    });
+  @ViewChild(DatatableComponent) table: DatatableComponent;
+  
+    constructor() {
+      this.fetch((data) => {
+        // cache our list
+        this.temp = [...data];
+  
+        // push our inital complete list
+        this.rows = data;
+      });
+    }
+  
+    fetch(cb) {
+      const req = new XMLHttpRequest();
+      req.open('GET', `assets/data/company.json`);
+  
+      req.onload = () => {
+        cb(JSON.parse(req.response));
+      };
+  
+      req.send();
+    }
+  
+    updateFilter(event) {
+      const val = event.target.value.toLowerCase();
+  
+      // filter our data
+      const temp = this.temp.filter(function(d) {
+        return d.name.toLowerCase().indexOf(val) !== -1 || !val;
+      });
+  
+      // update the rows
+      this.rows = temp;
+      // Whenever the filter changes, always go back to the first page
+      this.table.offset = 0;
+    }
+  
   }
-
-  fetch(cb) {
-    const req = new XMLHttpRequest();
-    req.open('GET', `assets/data/company.json`);
-
-    req.onload = () => {
-      cb(JSON.parse(req.response));
-    };
-
-    req.send();
-  }
-  updateValue(event, cell, cellValue, row) {
-    this.editing[row.$$index + '-' + cell] = false;
-    this.rows[row.$$index][cell] = event.target.value;
-    console.log(event, event.target.value);
-  }
-}
-

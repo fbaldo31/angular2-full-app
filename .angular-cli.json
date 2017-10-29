@@ -26,7 +26,8 @@
           "../node_modules/ngx-bootstrap/bundles/ngx-bootstrap.umd.min.js",
           "../node_modules/@ngx-translate/core/bundles/core.umd.js",
           "../node_modules/ng2-charts/bundles/ng2-charts.umd.min.js",
-          "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js"
+          "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js",
+          "../node_modules/@swimlane/ngx-datatable/release/datatable.module.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {
